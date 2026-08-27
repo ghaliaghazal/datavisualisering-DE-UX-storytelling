@@ -1,3 +1,6 @@
+#%%
+
+
 
 # Publikfavoriterna når nästan maximalt betyg
 
@@ -9,7 +12,6 @@ df = pd.read_csv("data/movies.csv")
 # Ta fram top 10 filmer
 top10 = df.sort_values("vote_average", ascending=False).head(10).sort_values("vote_average")
 
-# Färger: 9 gråa och 1 röd för vinnaren
 colors = ['gray'] * 9 + ['red']
 
 fig, ax = plt.subplots(figsize=(10, 5))
@@ -41,3 +43,4 @@ ax.grid(axis='x', alpha=0.3, linestyle='--')
 
 plt.tight_layout()
 plt.show()
+# %%
